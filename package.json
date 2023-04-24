@@ -1,0 +1,19 @@
+{
+  "name": "youtube_clone_nomad",
+  "version": "1.0.0",
+  "description": "youtube clone coding study in nomad adacemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minsungchu/clone_youtube.git"
+  },
+  "author": "mschu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minsungchu/clone_youtube/issues"
+  },
+  "homepage": "https://github.com/minsungchu/clone_youtube#readme"
+}
