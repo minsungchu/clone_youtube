@@ -1,5 +1,11 @@
+/////////////////////////////////////////////////////
+// import pakages
+/////////////////////////////////////////////////////
 import express from "express";
 import morgan from "morgan";
+import globalRouter from "./routers/globalRouter";
+import usersRouter from "./routers/usersRouter";
+import videosRouter from "./routers/videosRouter";
 
 /////////////////////////////////////////////////////
 // express init
@@ -9,20 +15,15 @@ const app = express();
 const logger = morgan("dev");
 
 /////////////////////////////////////////////////////
-// express configure
+// [express] configure router
 /////////////////////////////////////////////////////
-const handlerHome = (req, res) => {
-    return res.send("Youtube Clone Homepage");
-};
-const handleLogin = (req, res) => {
-    return res.send("Youtube Clone Login Page");
-}
 app.use(logger);
-app.get("/", handlerHome);
-app.get("/login", handleLogin);
+app.use("/", globalRouter);
+app.use("/users", usersRouter);
+app.use("/videos", videosRouter);
 
 /////////////////////////////////////////////////////
-// express listen
+// [express] listen
 /////////////////////////////////////////////////////
 const handleListening = () => 
     console.log(`✅ Server listenting on port http://localhost:${PORT} 🚀`);
