@@ -4,8 +4,8 @@
 import express from "express";
 import morgan from "morgan";
 import globalRouter from "./routers/globalRouter";
-import usersRouter from "./routers/usersRouter";
-import videosRouter from "./routers/videosRouter";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
 
 /////////////////////////////////////////////////////
 // express init
@@ -19,8 +19,8 @@ const logger = morgan("dev");
 /////////////////////////////////////////////////////
 app.use(logger);
 app.use("/", globalRouter);
-app.use("/users", usersRouter);
-app.use("/videos", videosRouter);
+app.use("/user", userRouter);
+app.use("/video", videoRouter);
 
 /////////////////////////////////////////////////////
 // [express] listen

@@ -2,16 +2,17 @@
 // import pakages
 /////////////////////////////////////////////////////
 import express from "express";
+import { trending, search } from "../controllers/videoController";
+import { join, login } from "../controllers/userController";
 
 /////////////////////////////////////////////////////
 // [express] global router
 /////////////////////////////////////////////////////
 const globalRouter = express.Router();
 
-const handlerHome = (req, res) => res.send("Youtube Clone Homepage");
-globalRouter.get("/", handlerHome);
-
-const handleLogin = (req, res) => res.send("Youtube Clone Login Page");
-globalRouter.get("/login", handleLogin);
+globalRouter.get("/", trending);
+globalRouter.get("/join", join);
+globalRouter.get("/login", login);
+globalRouter.get("/search", search);
 
 export default globalRouter;
