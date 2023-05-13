@@ -2,7 +2,7 @@
 // used in globalRouter
 /////////////////////////////////////////////////////
 export const trending   = (req, res) => {
-    return res.send("Youtube Clone Homepage - Videos");
+    return res.render("home");
 }
 export const search     = (req, res) => {
     return res.send("Youtube Clone Search Page");
