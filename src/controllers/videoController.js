@@ -1,9 +1,7 @@
 /////////////////////////////////////////////////////
 // used in globalRouter
 /////////////////////////////////////////////////////
-export const trending   = (req, res) => {
-    return res.render("home");
-}
+export const trending   = (req, res) => res.render("home");
 export const search     = (req, res) => {
     return res.send("Youtube Clone Search Page");
 }
@@ -11,12 +9,8 @@ export const search     = (req, res) => {
 /////////////////////////////////////////////////////
 // used in videoRouter
 /////////////////////////////////////////////////////
-export const see        = (req, res) => {
-    return res.send(`See Video #${req.params.id}`);
-}
-export const edit       = (req, res) => {
-    return res.send(`Edit Video #${req.params.id}`);
-}
+export const see        = (req, res) => res.render("video_watch");
+export const edit       = (req, res) => res.render("video_edit");
 export const remove     = (req, res) => {
     return res.send(`Remove Video #${req.params.id}`);
 }

@@ -18,7 +18,7 @@ const logger = morgan("dev");
 // [express] configure router
 /////////////////////////////////////////////////////
 app.set('view engine', 'pug');
-app.set("views", process.cwd() + "/src/views");
+app.set("views", process.cwd() + "/src/views"); // change views directory for rendering
 app.use(logger);
 app.use("/", globalRouter);
 app.use("/user", userRouter);
