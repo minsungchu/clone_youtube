@@ -1,7 +1,11 @@
 /////////////////////////////////////////////////////
 // used in globalRouter
 /////////////////////////////////////////////////////
-export const trending   = (req, res) => res.render("home", {pageTitle : "Home"});
+const fakeUser = {
+    username : "Boaz",
+    loggedIn : true
+}
+export const trending   = (req, res) => res.render("home", {pageTitle : "Home", fakeUser});
 export const search     = (req, res) => {
     return res.send("Youtube Clone Search Page");
 }
