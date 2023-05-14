@@ -5,7 +5,18 @@ const fakeUser = {
     username : "Boaz",
     loggedIn : true
 }
-export const trending   = (req, res) => res.render("home", {pageTitle : "Home", fakeUser});
+const videos = [
+    {
+        title: "Javascript"
+    },
+    {
+        title: "Python"
+    },
+    {
+        title: "C++"
+    }
+]
+export const trending   = (req, res) => res.render("home", {pageTitle : "Home", fakeUser, videos});
 export const search     = (req, res) => {
     return res.send("Youtube Clone Search Page");
 }
