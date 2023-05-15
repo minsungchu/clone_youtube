@@ -7,13 +7,28 @@ const fakeUser = {
 }
 const videos = [
     {
-        title: "Javascript"
+        title: "Javascript",
+        rating: 5,
+        comments: 2,
+        createdAt: "5 minutes ago",
+        views: 30,
+        id:1
     },
     {
-        title: "Python"
+        title: "Python",
+        rating: 5,
+        comments: 2,
+        createdAt: "10 minutes ago",
+        views: 20,
+        id:2
     },
     {
-        title: "C++"
+        title: "C++",
+        rating: 5,
+        comments: 2,
+        createdAt: "15 minutes ago",
+        views: 10,
+        id:2
     }
 ]
 export const trending   = (req, res) => res.render("home", {pageTitle : "Home", fakeUser, videos});
